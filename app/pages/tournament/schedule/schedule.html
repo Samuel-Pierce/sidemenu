@@ -1,0 +1,226 @@
+<ion-navbar *navbar>
+  <ion-buttons start>
+    <button menuToggle>
+      <ion-icon name="more"></ion-icon>
+    </button>
+  </ion-buttons>
+
+  <ion-title>
+
+      Schedule
+
+  </ion-title>
+
+</ion-navbar>
+<ion-toolbar class="filter-bar"> <!-- half normal height -->
+  <!-- <ion-scroll scrollX="true"> -->
+    <ion-row>
+      <!-- <ion-col>
+        <button outline small>
+          Zero Gravity Elite Tournament
+        </button>
+      </ion-col> -->
+      <ion-col>
+        <button clear small>
+          <small>
+            <span class="filter-button-text">saturday</span>
+          </small>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button clear small>
+          <small><b>Division 1</b></small>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button clear small>
+          <small><b>Pool C</b></small>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button clear small>
+          <small><b>Grade 8</b></small>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button clear small>
+          <small><b>Boys</b></small>
+        </button>
+      </ion-col>
+    </ion-row>
+  <!-- </ion-scroll> -->
+</ion-toolbar>
+
+<ion-content class="page1">
+
+<ion-list>
+  <ion-list-header class="half">
+    8:00am
+    <ion-note item-right>
+      <!-- <small>Div: 1 &middot; Pool: 3 &middot; Grade: 8 &middot; Boys</small> -->
+    </ion-note>
+  </ion-list-header>
+  <ion-item-sliding>
+  <ion-item>
+    <ion-avatar item-left>
+      <button dark outline  block>
+        0
+      </button>
+      <button dark outline block>
+        0
+      </button>
+    </ion-avatar>
+    <h3>Boston Celtics <small dark>(2-2)</small></h3>
+    <hr>
+    <h3>Golden State Warriors <small dark>(1-3)</small></h3>
+    <button clear item-right>Details</button>
+  </ion-item>
+  <ion-item-options>
+  <button success>
+    <ion-icon name="create"></ion-icon>
+    Update
+  </button>
+  <!-- <button warning>
+    <ion-icon name="share"></ion-icon>
+    Share
+  </button>
+  <button danger>
+    <ion-icon name="trash"></ion-icon>
+    Delete
+  </button> -->
+</ion-item-options>
+</ion-item-sliding>
+  <br>
+  <ion-item>
+    <ion-avatar item-left>
+      <button outline  block>
+        32
+      </button>
+      <button dark outline block>
+        28
+      </button>
+    </ion-avatar>
+    <h3>Houston Rockets <small dark>(0-3)</small></h3>
+    <hr>
+    <h3>Oklahoma City Thunder <small dark>(2-1)</small></h3>
+    <button clear item-right>Details</button>
+  </ion-item>
+  <br>
+  <ion-item>
+    <ion-avatar item-left>
+      <button danger outline block>
+        0
+      </button>
+      <button danger outline block>
+        0
+      </button>
+    </ion-avatar>
+    <h3>Cleveland Cavaliers <small dark>(1-2)</small></h3>
+    <hr>
+    <h3>Toronto Raptors <small dark>(1-0)</small></h3>
+    <button clear item-right>Details</button>
+  </ion-item>
+  <!-- <br>
+  <ion-item>
+    <ion-avatar item-left>
+      <button dark outline block>
+        44
+      </button>
+      <button outline block>
+        73
+      </button>
+    </ion-avatar>
+    <h3>Sacramento Kings <small dark>(2-1)</small></h3>
+    <hr>
+    <h3>Brooklyn Nets <small dark>(3-0)</small></h3>
+    <button clear item-right>Details</button>
+  </ion-item> -->
+  <br>
+  <ion-list-header class="half">
+    9:00am
+  </ion-list-header>
+  <ion-item>
+    <ion-avatar item-left>
+      <button light outline block>
+        0
+      </button>
+      <button light outline block>
+        0
+      </button>
+    </ion-avatar>
+    <h3>Washington Wizards <small dark>(1-1)</small></h3>
+    <hr>
+    <h3>Denver Nuggets <small dark>(2-0)</small></h3>
+    <button clear item-right>Details</button>
+  </ion-item>
+  <br>
+  <ion-item>
+    <ion-avatar item-left>
+      <button light outline block>
+        0
+      </button>
+      <button light outline block>
+        0
+      </button>
+    </ion-avatar>
+    <h3>Minnesota Timberwolves <small dark>(0-3)</small></h3>
+    <hr>
+    <h3>Charlotte Hornets <small dark>(2-1)</small></h3>
+    <button clear item-right>Details</button>
+  </ion-item>
+  <br>
+  <ion-item>
+    <ion-avatar item-left>
+      <button light outline block>
+        0
+      </button>
+      <button light outline block>
+        0
+      </button>
+    </ion-avatar>
+    <h3>Brooklyn Nets <small dark>(1-2)</small></h3>
+    <hr>
+    <h3>Sacramento Kings <small dark>(0-2)</small></h3>
+    <button clear item-right>Details</button>
+  </ion-item>
+
+  <ion-list-header block>
+    <span dark>10:00am</span>
+  </ion-list-header>
+  <ion-item>
+    <ion-avatar item-left>
+      <button clear block>
+        <ion-icon name="notifications-outline"></ion-icon>
+      </button>
+    </ion-avatar>
+    <h3>Detroit Pistons <small dark>(1-1)</small></h3>
+    <hr>
+    <h3>Milwaukee Bucks <small dark>(0-2)</small></h3>
+    <button clear item-right>Details</button>
+  </ion-item>
+  <br>
+  <ion-item>
+    <ion-avatar item-left>
+      <button clear block>
+        <ion-icon name="notifications-outline"></ion-icon>
+      </button>
+    </ion-avatar>
+    <h3>My Neighbor Totoro <small dark>(2-0)</small></h3>
+    <hr>
+    <h3>My Neighbor Totoro <small dark>(3-0)</small></h3>
+    <button clear item-right>Details</button>
+  </ion-item>
+  <br>
+  <ion-item>
+    <ion-avatar item-left>
+      <button clear block>
+        <ion-icon name="notifications-outline"></ion-icon>
+      </button>
+    </ion-avatar>
+    <h3>My Neighbor Totoro <small dark>(2-2)</small></h3>
+    <hr>
+    <h3>My Neighbor Totoro <small dark>(6-3)</small></h3>
+    <button clear item-right>Details</button>
+  </ion-item>
+</ion-list>
+</ion-content>
