@@ -4,69 +4,45 @@
       <ion-icon name="more"></ion-icon>
     </button>
   </ion-buttons>
-  <ion-buttons end>
-    <button (click)="showModal()">
-      <ion-icon name="menu"></ion-icon>
-    </button>
-  </ion-buttons>
 
   <ion-title>
 
-      Schedule
+      Bracket
 
   </ion-title>
 
 </ion-navbar>
-<ion-toolbar class="filter-bar"> <!-- half normal height -->
+<ion-toolbar class="half-filter"> <!-- half normal height -->
   <!-- <ion-scroll scrollX="true"> -->
-    <ion-row style="text-align: center">
+    <ion-row>
       <!-- <ion-col>
         <button outline small>
           Zero Gravity Elite Tournament
         </button>
       </ion-col> -->
       <ion-col>
-        <button clear block small>
-          <small>
-            <span class="filter-button-text">saturday</span>
-          </small>
+        <button clear small>
+          <small><b>Saturday</b></small>
         </button>
       </ion-col>
       <ion-col>
-        <button clear block small>
-          <small>
-            <span class="filter-button-text">
-              division 1
-              <!-- <ion-badge class="filter">1</ion-badge> -->
-            </span>
-          </small>
+        <button clear small>
+          <small><b>Division 1</b></small>
         </button>
       </ion-col>
       <ion-col>
-        <button clear block small>
-          <small>
-            <span class="filter-button-text">
-              pool b
-              <!-- <ion-badge class="filter">B</ion-badge> -->
-            </span>
-          </small>
+        <button clear small>
+          <small><b>Pool C</b></small>
         </button>
       </ion-col>
       <ion-col>
-        <button clear block small>
-          <small>
-            <span class="filter-button-text">
-              grade 6
-              <!-- <ion-badge class="filter">1</ion-badge> -->
-            </span>
-          </small>
+        <button clear small>
+          <small><b>Grade 8</b></small>
         </button>
       </ion-col>
       <ion-col>
-        <button clear block small>
-          <small>
-            <span class="filter-button-text">boys</span>
-          </small>
+        <button clear small>
+          <small><b>Boys</b></small>
         </button>
       </ion-col>
     </ion-row>
@@ -76,7 +52,7 @@
 <ion-content class="page1">
 
 <ion-list>
-  <ion-list-header class="header-bar">
+  <ion-list-header class="half">
     8:00am
     <ion-note item-right>
       <!-- <small>Div: 1 &middot; Pool: 3 &middot; Grade: 8 &middot; Boys</small> -->

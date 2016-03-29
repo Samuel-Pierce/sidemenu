@@ -17,3 +17,20 @@
   letter-spacing: 0.1rem;
   font-weight: bold;
 }
+
+.header-bar {
+  max-height: 22px;
+}
+
+ion-badge.filter {
+  font-size: 75%;
+  margin-bottom: 2px
+}
+
+ion-col[width-40] {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 40%;
+  -ms-flex: 0 0 40%;
+  flex: 0 0 40%;
+  max-width: 40%;
+}

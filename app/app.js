@@ -1,6 +1,10 @@
 import {App, IonicApp, Platform, MenuController} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 
+// modal
+// import {Modal, NavController} from 'ionic/ionic'
+// import {Modal, NavController, ViewController} from 'ionic-framework/ionic';
+
 // main tournament pages
 import {SchedulePage} from './pages/tournament/schedule/schedule';
 import {StandingsPage} from './pages/tournament/standings/standings';
@@ -13,9 +17,13 @@ import {StructurePage} from './pages/tournament/info/structure/structure';
 import {MembersPage} from './pages/tournament/info/members/members';
 
 // settings pages
-// import {TermsPage} from './pages/settings/terms/terms';
-// import {PrivacyPage} from './pages/settings/privacy/privacy';
-// import {AboutPage} from './pages/settings/about/about';
+import {TermsPage} from './pages/settings/terms/terms';
+import {PrivacyPage} from './pages/settings/privacy/privacy';
+import {AboutPage} from './pages/settings/about/about';
+import {FeedbackPage} from './pages/settings/feedback/feedback';
+import {NotificationsPage} from './pages/settings/notifications/notifications';
+
+// import {SelectTournamentModal} from './pages/modal/select-tournament/select-tournament';
 
 // import {ListPage} from './pages/tournament/list/list';
 // import {SetupPage} from './pages/tourny-info/setup/setup';
@@ -54,13 +62,14 @@ class MyApp {
       { title: 'Team, Players, Refs', component: MembersPage }
     ];
 
-    // set our apps settings pages
-    // this.settings = [
-    //   { title: 'Notifications', component: HelloIonicPage },
-    //   { title: 'Terms & Conditions', component: ListPage },
-    //   { title: 'Privacy', component: ListPage },
-    //   { title: 'About', component: ListPage }
-    // ];
+    //set our apps settings pages
+    this.settings = [
+      { title: 'Notifications', component: NotificationsPage },
+      { title: 'Terms & Conditions', component: TermsPage },
+      { title: 'Privacy Policy', component: PrivacyPage },
+      { title: 'Feedback', component: FeedbackPage },
+      { title: 'About', component: AboutPage }
+    ];
 
     // make HelloIonicPage the root (or first) page
     this.rootPage = StandingsPage;
@@ -87,3 +96,30 @@ class MyApp {
     nav.setRoot(page.component);
   }
 }
+//
+// @Page({
+//   template: `
+//   <ion-content padding>
+//     <h2>I'm a modal!</h2>
+//     <button (click)="close()">Close</button>
+//   </ion-content>`
+// })
+// class MyModal {
+//   constructor(viewCtrl: ViewController) {
+//     this.viewCtrl = viewCtrl;
+//   }
+//
+//   close() {
+//     this.viewCtrl.dismiss();
+//   }
+// }
+//
+// class MyPage {
+//   constructor(nav: NavController){
+//     this.nav = nav;
+//   }
+//   showModal() {
+//     let modal = Modal.create(MyModal);
+//     this.nav.present(modal)
+//   }
+// }

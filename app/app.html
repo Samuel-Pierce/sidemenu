@@ -2,11 +2,11 @@
 
   <ion-toolbar>
 
-    <ion-buttons start>
-      <button small menuToggle>
+    <!-- <ion-buttons start>
+      <button small outline dark menuToggle>
         <ion-icon name="swap"></ion-icon>
       </button>
-    </ion-buttons>
+    </ion-buttons> -->
 
     <ion-title style="padding: 0px;">
       <!-- <button outline primary small> -->
@@ -23,13 +23,14 @@
     <ion-list>
       <ion-item (click)="closeMenu()">
         Zero Gravity Tournmant
+        <ion-icon name="swap" primary item-right></ion-icon>
       </ion-item>
     </ion-list>
 
     <ion-list>
       <ion-list-header>
         <ion-icon name="git-network"></ion-icon>
-        <a href="">Tournament Pages</a>
+        Tournament Pages
       </ion-list-header>
 
       <button ion-item *ngFor="#p of pages" (click)="openPage(p)">
@@ -57,7 +58,13 @@
       </button>
     </ion-list>
 
-    <button full danger small> Log Out</button>
+    <ion-list>
+      <ion-item (click)="closeMenu()">
+        <span danger>Log Out</span>
+        <ion-icon name="log-out" danger item-right></ion-icon>
+      </ion-item>
+    </ion-list>
+
   </ion-content>
 
 </ion-menu>
