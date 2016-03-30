@@ -22,6 +22,7 @@ import {PrivacyPage} from './pages/settings/privacy/privacy';
 import {AboutPage} from './pages/settings/about/about';
 import {FeedbackPage} from './pages/settings/feedback/feedback';
 import {NotificationsPage} from './pages/settings/notifications/notifications';
+import {PlayerDetailsPage} from './pages/settings/notifications/notifications';
 
 // import {SelectTournamentModal} from './pages/modal/select-tournament/select-tournament';
 
@@ -55,6 +56,13 @@ class MyApp {
     ];
 
     // set our tournament details pages
+    this.team = [
+      { title: 'Team Chat', component: LocationsPage },
+      { title: 'Team Roster', component: LocationsPage },
+      { title: 'Practice Schedule', component: DateTimePage }
+    ];
+
+    // set our tournament details pages
     this.tournamentInfo = [
       { title: 'Structure', component: StructurePage },
       { title: 'Courts & Locations', component: LocationsPage },
@@ -70,6 +78,8 @@ class MyApp {
       { title: 'Feedback', component: FeedbackPage },
       { title: 'About', component: AboutPage }
     ];
+
+
 
     // make HelloIonicPage the root (or first) page
     this.rootPage = StandingsPage;

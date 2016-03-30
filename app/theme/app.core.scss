@@ -34,3 +34,10 @@ ion-col[width-40] {
   flex: 0 0 40%;
   max-width: 40%;
 }
+ion-col[width-5] {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 5%;
+  -ms-flex: 0 0 5%;
+  flex: 0 0 5%;
+  max-width: 5%;
+}
