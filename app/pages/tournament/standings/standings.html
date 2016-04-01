@@ -4,12 +4,24 @@
       <ion-icon name="more"></ion-icon>
     </button>
   </ion-buttons>
-
-  <ion-title>
-
+<ion-title>
+  <ion-segment [(ngModel)]="relationship" primary>
+    <ion-segment-button value="z" (select)="selectedFriends()">
+      Schedule
+    </ion-segment-button>
+    <ion-segment-button value="y" (select)="selectedEnemies()">
+      Bracket
+    </ion-segment-button>
+    <ion-segment-button value="x" (select)="selectedEnemiez()">
       Standings
-
-  </ion-title>
+    </ion-segment-button>
+  </ion-segment>
+</ion-title>
+  <ion-buttons end>
+    <button>
+      <ion-icon name="information"></ion-icon>
+    </button>
+  </ion-buttons>
 
 </ion-navbar>
 <ion-toolbar class="filter-bar"> <!-- half normal height -->
@@ -90,6 +102,7 @@
     <ion-col width-10 padding-bottom padding-top>123</ion-col>
     <ion-col width-10 padding-bottom padding-top>13</ion-col>
   </ion-row>
+
   <ion-row style="border-bottom: 1px solid #eee">
     <ion-col width-50 padding-bottom padding-top>Boston Celtics Boys 5th</ion-col>
     <ion-col width-10 padding-bottom padding-top>1</ion-col>
@@ -99,6 +112,5 @@
     <ion-col width-10 padding-bottom padding-top>123</ion-col>
     <ion-col width-10 padding-bottom padding-top>13</ion-col>
   </ion-row>
-
 
 </ion-content>

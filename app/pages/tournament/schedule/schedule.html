@@ -1,34 +1,37 @@
 <ion-navbar *navbar>
   <ion-buttons start>
-    <button menuToggle>
+    <button menuToggle dark>
       <ion-icon name="more"></ion-icon>
     </button>
   </ion-buttons>
   <ion-buttons end>
     <button (click)="showModal()">
-      <ion-icon name="menu"></ion-icon>
+      <ion-icon name="information" dark></ion-icon>
     </button>
   </ion-buttons>
 
   <ion-title>
-
-      Schedule
-
+    <ion-segment [(ngModel)]="tournyView" dark>
+      <ion-segment-button value="schedule" (select)="selectedFriends()">
+        Schedule
+      </ion-segment-button>
+      <ion-segment-button value="bracket" (select)="selectedEnemies()">
+        Bracket
+      </ion-segment-button>
+      <ion-segment-button value="standings" (select)="selectedEnemiez()">
+        Standings
+      </ion-segment-button>
+    </ion-segment>
   </ion-title>
-
 </ion-navbar>
-<ion-toolbar class="filter-bar"> <!-- half normal height -->
-  <!-- <ion-scroll scrollX="true"> -->
-    <ion-row style="text-align: center">
-      <!-- <ion-col>
-        <button outline small>
-          Zero Gravity Elite Tournament
-        </button>
-      </ion-col> -->
+
+<ion-toolbar class="filter-bar" [ngSwitch]="tournyView"> <!-- half normal height -->
+    <ion-row style="text-align: center" >
       <ion-col>
+        <!-- *ngRepeat="filter of filters" -->
         <button clear block small>
           <small>
-            <span class="filter-button-text">saturday</span>
+            <!-- <span class="filter-button-text">{{filter.title}}</span> -->
           </small>
         </button>
       </ion-col>
@@ -37,7 +40,6 @@
           <small>
             <span class="filter-button-text">
               division 1
-              <!-- <ion-badge class="filter">1</ion-badge> -->
             </span>
           </small>
         </button>
@@ -47,7 +49,6 @@
           <small>
             <span class="filter-button-text">
               pool b
-              <!-- <ion-badge class="filter">B</ion-badge> -->
             </span>
           </small>
         </button>
@@ -57,7 +58,6 @@
           <small>
             <span class="filter-button-text">
               grade 6
-              <!-- <ion-badge class="filter">1</ion-badge> -->
             </span>
           </small>
         </button>
@@ -70,7 +70,6 @@
         </button>
       </ion-col>
     </ion-row>
-  <!-- </ion-scroll> -->
 </ion-toolbar>
 
 <ion-content class="page1">
@@ -85,11 +84,11 @@
   <ion-item-sliding>
   <ion-item>
     <ion-avatar item-left>
-      <button dark outline  block>
-        0
+      <button outline  block>
+        89
       </button>
       <button dark outline block>
-        0
+        76
       </button>
     </ion-avatar>
     <h3>Boston Celtics <small dark>(2-2)</small></h3>
@@ -98,18 +97,10 @@
     <button clear item-right>Details</button>
   </ion-item>
   <ion-item-options>
-  <button success>
-    <ion-icon name="create"></ion-icon>
-    Update
-  </button>
-  <!-- <button warning>
+  <button primary>
     <ion-icon name="share"></ion-icon>
     Share
   </button>
-  <button danger>
-    <ion-icon name="trash"></ion-icon>
-    Delete
-  </button> -->
 </ion-item-options>
 </ion-item-sliding>
   <br>
@@ -130,11 +121,11 @@
   <br>
   <ion-item>
     <ion-avatar item-left>
-      <button danger outline block>
-        0
+      <button dark outline block>
+        50
       </button>
-      <button danger outline block>
-        0
+      <button outline block>
+        55
       </button>
     </ion-avatar>
     <h3>Cleveland Cavaliers <small dark>(1-2)</small></h3>
@@ -142,32 +133,14 @@
     <h3>Toronto Raptors <small dark>(1-0)</small></h3>
     <button clear item-right>Details</button>
   </ion-item>
-  <!-- <br>
-  <ion-item>
-    <ion-avatar item-left>
-      <button dark outline block>
-        44
-      </button>
-      <button outline block>
-        73
-      </button>
-    </ion-avatar>
-    <h3>Sacramento Kings <small dark>(2-1)</small></h3>
-    <hr>
-    <h3>Brooklyn Nets <small dark>(3-0)</small></h3>
-    <button clear item-right>Details</button>
-  </ion-item> -->
   <br>
-  <ion-list-header class="half">
+  <ion-list-header class="header-bar">
     9:00am
   </ion-list-header>
   <ion-item>
     <ion-avatar item-left>
-      <button light outline block>
-        0
-      </button>
-      <button light outline block>
-        0
+      <button clear block>
+        <ion-icon name="notifications"></ion-icon>
       </button>
     </ion-avatar>
     <h3>Washington Wizards <small dark>(1-1)</small></h3>
@@ -178,11 +151,8 @@
   <br>
   <ion-item>
     <ion-avatar item-left>
-      <button light outline block>
-        0
-      </button>
-      <button light outline block>
-        0
+      <button clear block>
+        <ion-icon name="notifications-outline"></ion-icon>
       </button>
     </ion-avatar>
     <h3>Minnesota Timberwolves <small dark>(0-3)</small></h3>
@@ -193,11 +163,8 @@
   <br>
   <ion-item>
     <ion-avatar item-left>
-      <button light outline block>
-        0
-      </button>
-      <button light outline block>
-        0
+      <button clear block>
+        <ion-icon name="notifications-outline"></ion-icon>
       </button>
     </ion-avatar>
     <h3>Brooklyn Nets <small dark>(1-2)</small></h3>
@@ -205,9 +172,9 @@
     <h3>Sacramento Kings <small dark>(0-2)</small></h3>
     <button clear item-right>Details</button>
   </ion-item>
-
-  <ion-list-header block>
-    <span dark>10:00am</span>
+  <br>
+  <ion-list-header class="header-bar">
+    10:00am
   </ion-list-header>
   <ion-item>
     <ion-avatar item-left>
@@ -224,12 +191,12 @@
   <ion-item>
     <ion-avatar item-left>
       <button clear block>
-        <ion-icon name="notifications-outline"></ion-icon>
+        <ion-icon name="notifications"></ion-icon>
       </button>
     </ion-avatar>
-    <h3>My Neighbor Totoro <small dark>(2-0)</small></h3>
+    <h3>Boston Celtics <small dark>(2-2)</small></h3>
     <hr>
-    <h3>My Neighbor Totoro <small dark>(3-0)</small></h3>
+    <h3>Golden State Warriors <small dark>(1-3)</small></h3>
     <button clear item-right>Details</button>
   </ion-item>
   <br>
@@ -239,9 +206,9 @@
         <ion-icon name="notifications-outline"></ion-icon>
       </button>
     </ion-avatar>
-    <h3>My Neighbor Totoro <small dark>(2-2)</small></h3>
+    <h3>Cleveland Cavaliers <small dark>(1-2)</small></h3>
     <hr>
-    <h3>My Neighbor Totoro <small dark>(6-3)</small></h3>
+    <h3>Toronto Raptors <small dark>(1-0)</small></h3>
     <button clear item-right>Details</button>
   </ion-item>
 </ion-list>

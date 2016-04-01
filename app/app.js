@@ -30,8 +30,6 @@ import {PlayerDetailsPage} from './pages/settings/notifications/notifications';
 // import {SetupPage} from './pages/tourny-info/setup/setup';
 
 
-
-
 @App({
   templateUrl: 'build/app.html',
   config: {} // http://ionicframework.com/docs/v2/api/config/Config/
@@ -47,6 +45,20 @@ class MyApp {
     this.platform = platform;
     this.menu = menu;
     this.initializeApp();
+    // this.filters = [
+    //   { title: 'Day', value: ''},
+    //   { title: 'Division', value: ''},
+    //   { title: 'Pool', value: '',},
+    //   { title: 'Grade', value: ''},
+    //   { title: 'Gender', value: ''},
+    // ];
+    // this.filters.schedule = [
+    //   { title: 'Day', value: '', component: DayRadioAlert },
+    //   { title: 'Division', value: '', component: DivisionRadioAlert },
+    //   { title: 'Pool', value: '', component: PoolRadioAlert },
+    //   { title: 'Grade', value: '', component: GradeRadioAlert },
+    //   { title: 'Gender', value: '', component: GenderRadioAlert },
+    // ];
 
     // set our app's main pages
     this.pages = [
@@ -82,7 +94,7 @@ class MyApp {
 
 
     // make HelloIonicPage the root (or first) page
-    this.rootPage = StandingsPage;
+    this.rootPage = SchedulePage;
   }
 
   initializeApp() {
@@ -106,30 +118,3 @@ class MyApp {
     nav.setRoot(page.component);
   }
 }
-//
-// @Page({
-//   template: `
-//   <ion-content padding>
-//     <h2>I'm a modal!</h2>
-//     <button (click)="close()">Close</button>
-//   </ion-content>`
-// })
-// class MyModal {
-//   constructor(viewCtrl: ViewController) {
-//     this.viewCtrl = viewCtrl;
-//   }
-//
-//   close() {
-//     this.viewCtrl.dismiss();
-//   }
-// }
-//
-// class MyPage {
-//   constructor(nav: NavController){
-//     this.nav = nav;
-//   }
-//   showModal() {
-//     let modal = Modal.create(MyModal);
-//     this.nav.present(modal)
-//   }
-// }
