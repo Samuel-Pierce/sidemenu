@@ -83,6 +83,12 @@
     </ion-card>
 
     <ion-list>
+      <button ion-item *ngFor="#f of filters">
+        <span>{{f.title}}</span>
+      </button>
+    </ion-list>
+
+    <ion-list>
       <ion-list-header>
         Settings
       </ion-list-header>
