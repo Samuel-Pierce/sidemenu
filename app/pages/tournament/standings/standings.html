@@ -41,7 +41,11 @@
 </ion-toolbar>
 
 <ion-content>
-
+  <ion-list>
+    <ion-item *ngFor="#item of standings">
+      {{item.team}}
+    </ion-item>
+  </ion-list>
 <!--  HEADERS -->
   <ion-row>
     <ion-col width-40>
