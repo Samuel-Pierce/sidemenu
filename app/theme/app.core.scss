@@ -22,11 +22,6 @@
   max-height: 22px;
 }
 
-ion-badge.filter {
-  font-size: 75%;
-  margin-bottom: 2px
-}
-
 ion-col[width-40] {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 40%;
@@ -34,3 +29,29 @@ ion-col[width-40] {
   flex: 0 0 40%;
   max-width: 40%;
 }
+
+ion-col[width-12] {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 12%;
+  -ms-flex: 0 0 12%;
+  flex: 0 0 12%;
+  max-width: 12%;
+}
+
+ion-row.standings {
+  border-bottom: 1px solid #eee;
+}
+
+ion-col.standings-data {
+  height: 44px;
+  line-height: 44px;
+  overflow: hidden;
+}
+
+.row:nth-of-type(odd) {
+    background: #e0e0e0;
+}
+//
+// ion-row.standings:nth-of-type(odd) {
+//   background: #eee;
+// }
